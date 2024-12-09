@@ -1,0 +1,267 @@
+body body {
+        font-family: 'Roboto', sans-serif;
+      }
+
+.font-size{
+  font-size: 18px;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* HERO SECTION */
+.carousel-item {
+  height: 100vh; /* Full-screen height */
+  margin-top: 0;
+}
+.carousel-item img {
+  object-fit: cover;
+  height: 100%;
+}
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+.carousel {
+  position: relative;
+}
+/* SOLUTION SECTION */
+.read-more {
+  color: #000000; /* Bootstrap link color */
+  cursor: pointer;
+  text-decoration: none;
+}
+.read-more:hover {
+  text-decoration: underline;
+}
+
+.custom-card {
+  background-color: #f8f9fa; /* Light gray background */
+  height: 300px; /* Reduced height */
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden; /* Ensures content stays inside rounded corners */
+  border: none;
+  outline: none;
+}
+.custom-card img {
+  border-top-left-radius: 15px; /* Match card radius for image */
+  border-top-right-radius: 15px; /* Match card radius for image */
+}
+.custom-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Align text and buttons neatly */
+  border: none;
+  outline: none;
+}
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: white !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand img {
+  width: 150px;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #333 !important;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+/* footer */
+.footer-section {
+  background-color: #000; /* Dark background */
+  color: rgb(206, 201, 201); /* White text color */
+  padding: 50px 20px;
+  justify-items: space-between;
+}
+
+.fnav-link {
+  text-decoration: none;
+  padding: 0 10px;  /* Adds space between the links */
+  color:rgb(206, 201, 201);  /* Links in white */
+  cursor: pointer;
+}
+
+.social-icons a {
+  font-size: 18px;
+  color: rgb(206, 201, 201);
+  text-decoration: none;
+}
+
+.copy{
+  font-size: 14px;
+  color: #646972;
+}
+/* .footer-nav{
+  text-align: center !important;
+  justify-content: center !important;
+  justify-items: center !important;
+}
+.social{
+  text-align: end !important;
+  justify-content: end !important;
+  justify-items: end !important;
+} */
+
+/* .social-icons a:hover {
+  color: #007bff;
+} */
+/* end of footer */
+
+
+.btn-dark {
+  background-color: #000;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+body body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-size{
+font-size: 18px;
+}
+
+.background-img{
+background-image: url(images/banner1.png); 
+background-size: cover; 
+background-position: center; 
+height: 100vh;
+}
+/* HERO SECTION */
+.welcome{
+  font-size: 3.2em;
+}
+
+/* SOLUTION SECTION */
+.read-more {
+color: #000000; /* Bootstrap link color */
+cursor: pointer;
+text-decoration: none;
+}
+.read-more:hover {
+text-decoration: underline;
+}
+
+.custom-card {
+background-color: #f8f9fa; /* Light gray background */
+height: 300px; /* Reduced height */
+border-radius: 15px; /* Rounded corners */
+overflow: hidden; /* Ensures content stays inside rounded corners */
+border: none;
+outline: none;
+}
+.custom-card img {
+border-top-left-radius: 15px; /* Match card radius for image */
+border-top-right-radius: 15px; /* Match card radius for image */
+}
+.custom-card .card-body {
+display: flex;
+flex-direction: column;
+justify-content: space-between; /* Align text and buttons neatly */
+border: none;
+outline: none;
+}
+
+
+.accordion-item {
+border-top: 2px solid #000;  /* Top border */
+border-bottom: 2px solid #000;  /* Bottom border */
+border-left: none;  /* No left border */
+border-right: none;  /* No right border */
+margin-bottom: 10px; /* Space between items */
+}
+
+.accordion-button {
+border: none; /* Remove default border of the button */
+padding: 15px; /* Add padding to button */
+background-color: #fff; /* Light background */
+font-weight: bold; /* Bold text */
+}
+
+.accordion-button:not(.collapsed) {
+background-color: #fff; /* Change background color when collapsed */
+}
+
+/* Optional: Change the color of the accordion body */
+.accordion-body {
+background-color: #f0f0f0; /* Light gray background for body */
+}
+/* Remove focus outline and blue border */
+.accordion-button {
+outline: none;
+box-shadow: none;
+}
+
+/* Remove the default arrow on the accordion button */
+.accordion-button::after {
+display: none;
+
+}
+
+/* Add a custom hover/focus style if desired */
+.accordion-button:focus {
+outline: none;
+box-shadow: none;
+color: #000;
+}
+/* Ensure accordion toggle text is always black */
+.accordion-button {
+color: black; /* Set text color to black */
+}
+
+/* Ensure the accordion button does not inherit blue styles */
+.accordion-button:not(.collapsed) {
+color: black; /* Text color remains black even when expanded */
+background-color: transparent; /* Remove any background color */
+box-shadow: none; /* No shadow on active state */
+}
+
+/* Keep the paragraph background white */
+.text-center.bg-white {
+background-color: white; /* Ensure the background color stays white */
+color: black; /* Set text color to black for readability */
+}
+
+/* choose  */
+.check-in{
+  width: 25px;
+}
+
+/* FAQ */
+.button-faq{
+  width: 40%;
+}
+
+/* OUR SERVICES */
