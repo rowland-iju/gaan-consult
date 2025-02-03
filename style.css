@@ -1,35 +1,36 @@
-body body {
-        font-family: 'Roboto', sans-serif;
-      }
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+.gaan-header{
+  color:#1A1A1A  ;
+}
 
 .font-size{
   font-size: 18px;
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-}
-
 /* HERO SECTION */
-.carousel-item {
-  height: 100vh; /* Full-screen height */
+/* .carousel-item {
+  height: 100vh; 
   margin-top: 0;
 }
 .carousel-item img {
   object-fit: cover;
   height: 100%;
+} */
+
+.hero-content h1 {
+  font-size: 4vw; 
 }
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-  z-index: 10;
+
+.hero-content p {
+  font-size: 2vw; 
 }
+
 .carousel {
   position: relative;
 }
@@ -44,43 +45,53 @@ body, html {
 }
 
 .custom-card {
-  background-color: #f8f9fa; /* Light gray background */
-  height: 300px; /* Reduced height */
-  border-radius: 15px; /* Rounded corners */
+  background-color: #f8f9fa; 
+  height: 300px; 
+  border-radius: 15px; 
   overflow: hidden; /* Ensures content stays inside rounded corners */
   border: none;
   outline: none;
 }
 .custom-card img {
-  border-top-left-radius: 15px; /* Match card radius for image */
-  border-top-right-radius: 15px; /* Match card radius for image */
+  border-top-left-radius: 15px; 
+  border-top-right-radius: 15px;
 }
 .custom-card .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Align text and buttons neatly */
+  justify-content: space-between; 
   border: none;
   outline: none;
-}
-
-
-
-
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: 'Roboto', sans-serif;
 }
 
 /* Navbar Styling */
 .navbar {
   background-color: white !important;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* position: sticky !important;
+  top: 0;
+  z-index: 1020; */
 }
 
-.navbar-brand img {
-  width: 150px;
+/* .navbar-brand img {
+  width: 20%;
+} */
+
+.nav-btn{
+  background-color: #0A0CC3 !important;
+  color: #fff;
+}
+
+.nav-btn:hover{
+  background-color: #23DCE1 !important;
+  color: #000;
+}
+
+.logo {
+ height: 50px;
+ width: auto;
+ position: relative;
+ left: 70px;
 }
 
 .nav-link {
@@ -88,13 +99,48 @@ body {
   color: #333 !important;
 }
 
-.navbar {
-  position: fixed;
+/* .navbar {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9999;
+  position: static;
+} */
+
+/* Move the navbar-toggler to the right */
+.navbar-toggler {
+  margin-left: auto;
 }
+
+  #heroCarousel .carousel-item {
+      height: 100vh;
+      min-height: 100vh;
+  }
+
+  #heroCarousel .carousel-item img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+  }
+
+  .hero-content {
+      position: absolute;
+  }
+
+  /* Ensure the text remains readable */
+  .mybtn {
+      background: #fff;
+      color: #0A0CC3;
+      padding: 10px 20px;
+      position: relative;
+      top: 27rem;
+      left: 13rem;
+  }
+
+  .mybtn:hover{
+    background: #E6E6E6;
+    color: #000;
+  }
+
 
 /* footer */
 .footer-section {
@@ -109,6 +155,10 @@ body {
   padding: 0 10px;  /* Adds space between the links */
   color:rgb(206, 201, 201);  /* Links in white */
   cursor: pointer;
+}
+
+.footer-logo{
+  width: 35%;
 }
 
 .social-icons a {
@@ -143,10 +193,7 @@ body {
   border: none;
   padding: 0.5rem 1.5rem;
   font-size: 0.9rem;
-}
-
-body body {
-  font-family: 'Roboto', sans-serif;
+  width: 100;
 }
 
 .font-size{
@@ -259,9 +306,92 @@ color: black; /* Set text color to black for readability */
   width: 25px;
 }
 
-/* FAQ */
-.button-faq{
-  width: 40%;
+.Choose-bg {
+  background-color:#E6E6E6 ;
 }
 
-/* OUR SERVICES */
+.fa-solid {
+  font-size: 20px; /* Change icon size */
+  color: #1A1A1A ; /* Change icon color */
+  border: 50%;
+}
+
+.icon{
+  background-color: #23DCE1;
+  border-radius: 50%;
+  width: 33px;
+  height: 33px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/* FAQ */
+.button-faq{
+  width: 20%;
+  background-color:#23DCE1 ;
+  color: #1A1A1A;
+}
+
+.button-faq:hover{
+  background-color: #0A0CC3;
+  color: #fff;
+}
+
+.accordion-body{
+  color:#1A1A1A ;
+}
+
+/* ABOUT */
+
+.about-bg{
+  background-color:#0A0CC3 ;
+  color:#E6E6E6 ;
+}
+
+.submit-btn{
+  width: 20%;
+  background-color:#23DCE1 ;
+  color: #1A1A1A;
+}
+
+.submit-btn:hover{
+  background-color: #0A0CC3;
+  color: #fff;
+}
+
+@media (max-width: 1282px) {
+  .mybtn {
+    top: 40rem;
+    left: 6rem;
+    font-size: 2rem !important;
+}
+
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 6vw;
+  }
+
+  .hero-content p {
+    font-size: 4vw;
+  }
+
+  .logo {
+    left: 0;
+   }
+}
+
+/* For small screens (e.g., mobile) */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 8vw;
+  }
+
+  .hero-content p {
+    font-size: 5vw;
+  }
+}
