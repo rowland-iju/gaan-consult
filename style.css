@@ -397,8 +397,6 @@ color: black; /* Set text color to black for readability */
 
   .button-faq{
     width: 40%;
-    background-color:#23DCE1 ;
-    color: #1A1A1A;
   }
 
   .slide_btn {
@@ -421,7 +419,7 @@ color: black; /* Set text color to black for readability */
 
    /* OUR SERVICES */
 
-.service{
+.faq{
   margin-top: 2rem;
 }
 }
@@ -441,4 +439,12 @@ color: black; /* Set text color to black for readability */
   .carousel-caption{
     width: 35%;
    }
+
+   .button-faq{
+    width: 35%;
+  }
+
+  .faq{
+    margin-top: 3rem;
+  }
 }
