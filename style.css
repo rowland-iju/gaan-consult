@@ -3,6 +3,7 @@ body, html {
   padding: 0;
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
+  
 }
 
 .gaan-header{
@@ -13,16 +14,11 @@ body, html {
   font-size: 18px;
 }
 
-/* HERO SECTION */
-/* .carousel-item {
-  height: 100vh; 
-  margin-top: 0;
-}
-.carousel-item img {
-  object-fit: cover;
-  height: 100%;
-} */
+/* Hero Section */
 
+.hero{
+  padding-top: 4.9rem;
+}
 .hero-content h1 {
   font-size: 4vw; 
 }
@@ -30,6 +26,13 @@ body, html {
 .hero-content p {
   font-size: 2vw; 
 }
+
+.slide_btn:hover{
+  color: #23DCE1;
+  background-color: transparent !important;
+  border: 3px solid #23DCE1;
+}
+
 
 .carousel {
   position: relative;
@@ -126,14 +129,21 @@ body, html {
       position: absolute;
   }
 
+  .carousel-caption{
+    right: 73%;
+    top: 10vh;
+  }
+
   /* Ensure the text remains readable */
   .mybtn {
       background: #fff;
       color: #0A0CC3;
       padding: 10px 20px;
       position: relative;
-      top: 27rem;
-      left: 13rem;
+      /* top: 27rem;
+      left: 13rem; */
+
+      top: 50%;
   }
 
   .mybtn:hover{
@@ -376,22 +386,34 @@ color: black; /* Set text color to black for readability */
     font-size: 6vw;
   }
 
-  .hero-content p {
-    font-size: 4vw;
+  .slide_btn {
+    font-size: 16px !important;
+    width: 100%;
+    border-radius: 10px;
   }
 
   .logo {
     left: 0;
+   }
+
+   .carousel-caption{
+    width: 25%;
    }
 }
 
 /* For small screens (e.g., mobile) */
 @media (max-width: 480px) {
   .hero-content h1 {
-    font-size: 8vw;
+    font-size: 12px !important;
   }
 
-  .hero-content p {
-    font-size: 5vw;
+  .slide_btn {
+    font-size: 16px !important;
+    width: 100%;
+    border-radius: 10px;
   }
+
+  .carousel-caption{
+    width: 35%;
+   }
 }
