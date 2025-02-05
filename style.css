@@ -378,13 +378,15 @@ color: black; /* Set text color to black for readability */
     left: 6rem;
     font-size: 2rem !important;
 }
-
+/* .footer-section{
+  margin-top: 10rem;
+ } */
 }
 
 @media (max-width: 768px) {
-  .hero-content h1 {
+  /* .hero-content h1 {
     font-size: 6vw;
-  }
+  } */
 
   .slide_btn {
     font-size: 16px !important;
@@ -399,6 +401,10 @@ color: black; /* Set text color to black for readability */
    .carousel-caption{
     width: 25%;
    }
+
+   /* .footer-section{
+    margin-top: 5rem;
+   } */
 }
 
 /* For small screens (e.g., mobile) */
