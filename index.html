@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Swipe Animation Demo</title>
+    
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Customise CSS -->
+     <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+
+#slide_btn2:hover{
+  color: #0A0CC3 !important;
+  background-color: transparent !important;
+  border: 3px solid #0A0CC3 !important;
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+}
+
+.carousel-inner {
+  height: 100%;
+  background: #000;
+}
+
+.carousel-caption{
+  /* padding-bottom:80px; */
+  margin-top: 21rem;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+/* .fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    opacity:0.6;
+} */
+
+
+
+
+/**
+ * Button
+ */
+.btn-transparent {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+
+/* .btn-large {
+  padding: 10px 15x;
+  font-size: 18px;
+  background-color: #fff;
+  color: #0A0CC3;
+} */
+
+
+
+/**
+ * Change animation duration
+ */
+.animated {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+
+
+  </style>
+
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="images/logo.png" alt="Logo" class="logo me-2">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-start p-4">
+            <li class="nav-item">
+              <a class="nav-link active fw-bold text-black me-4" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold text-black me-4" href="#solutions">Solutions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-black me-4" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-black me-4" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://wa.me/17807885655" target="_blank" class="btn btn-dark nav-btn btn-sm rounded-pill">Book Now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+  
+    <!-- HERO SECTION -->
+     
+     <div id="carouselExampleAutoplaying" class="carousel slide hero" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+          <!-- Slide 1 -->
+
+        <div class="carousel-item active">
+          <div  style="background-image:url('images/slide1.png');  background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height: 100vh;"></div>
+          <div class="carousel-caption" >
+                 
+            <p class="animated fadeInUp"><a href="#contact" class="btn btn-transparent btn-rounded btn-lg slide_btn">Learn More</a></p>
+          </div>
+        </div>
+          
+          <!-- Slide 2 -->
+
+          <div class="carousel-item ">
+            <div class="fill " style="background-image:url('images/slide2.png');  background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height: 100vh;"></div>
+            <div class="carousel-caption" style="text-align: left;">
+                   
+              <p class="animated fadeInUp"><a href="#contact" class="btn btn-transparent btn-rounded btn-lg slide_btn" id="slide_btn2">Learn More</a></p>
+            </div>
+          </div>
+
+          <!-- <div class="carousel-item">
+            <div style="background-image: url(images/slide2.png); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height: 100vh;">
+              <a href="#contact" class="btn btn-lg rounded-pill fs-5 mybtn">Get Started</a>
+            </div>
+          </div> -->
+          <!-- Slide 3 -->
+
+          <div class="carousel-item">
+            <div class="fill " style="background-image:url('images/slide3.png');  background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height: 100vh;"></div>
+            <div class="carousel-caption" style="text-align: left;">
+                   
+              <p class="animated fadeInUp"><a href="#contact" class="btn btn-transparent btn-rounded btn-lg slide_btn">Learn More</a></p>
+            </div>
+          </div>
+
+          <!-- <div class="carousel-item">
+            <div style="background-image: url(images/slide3.png); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height: 100vh;">
+              <a href="#contact" class="btn btn-lg rounded-pill fs-5 mybtn">Get Started</a>
+            </div>
+          </div> -->
+      </div>
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+  </div>  <!--End of Hero Section  -->
+  
+    
+
+
+    <!-- SOLUTION SECTION -->
+    <div class="container mt-5 " id="solutions">
+      <h2 class="text-center mb-4 fw-bold py-4 gaan-header">Our Solutions</h2>
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm border-0 rounded-3">
+            <img src="images/solution4.png" class="card-img-top rounded-top" alt="Card 1">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h5 class="card-title">Arolf Consult CRM</h5>
+              <p class="card-text">Client: Study Abroad Agency...</p>
+              <a href="#" class="read-more btn-link" data-bs-toggle="modal" data-bs-target="#read-more1">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 1 Modal  -->
+        <div class="modal fade" tabindex="-1" id="read-more1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5>Arolf Consult CRM: <i style="font-weight: 100; font-size: 1.1rem;">Study Abroad Agency</i></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="pb-5">
+                  <img src="images/arolf.png" style="width: 100%;">
+                </div>
+
+                <div class="ms-4">
+                  <h4>Features:</h4>
+
+                  <ul>
+                    <li> <strong>Dashboard:</strong> Real-time overview of prospects, application stages, staff assignments, upcoming sessions, and task statuses for swift decision-making.</li>
+
+                    <li><strong>Automation:</strong> Notifies staff of new and overdue tasks, and automatically updates students on application progress.</li>
+
+                    <li><strong>Task Assignment:</strong> Assign tasks to manage student applications efficiently.</li>
+
+                    <li><strong>Comments:</strong> Collaborate seamlessly on applications to keep everyone aligned.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <!-- End Of Card 1 -->
+    
+        <!-- Card 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm border-0 rounded-3">
+            <img src="images/solution2.png" class="card-img-top rounded-top" alt="Card 2">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h5 class="card-title">MPH Pharmacy POS & Inventory App</h5>
+              <p class="card-text">Client: Local Pharmacy...</p>
+              <a href="#" class="read-more btn-link" data-bs-toggle="modal" data-bs-target="#read-more2">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 2 Modal  -->
+        <div class="modal fade" tabindex="-1" id="read-more2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5>MPH Pharmacy POS & Inventory App: <i style="font-weight: 100; font-size: 1.1rem;">Local Pharmacy</i></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="ms-4">
+                  <h4>Features:</h4>
+
+                  <ul>
+                    <li> <strong>Dashboard:</strong> Snapshot of revenue summaries, weekly sales trends, and top-selling drugs.</li>
+
+                    <li><strong>POS System:</strong> Detailed transaction tracking with payment details, sales rep info, and transaction status at the point of sale.</li>
+
+                    <li><strong>Inventory Management:</strong> Real-time updates on stock levels, allowing management to maintain optimal inventory.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <!-- End Of Card 2 -->
+    
+        <!-- Card 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm border-0 rounded-3">
+            <img src="images/solution3.png" class="card-img-top rounded-top" alt="Card 3">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h5 class="card-title">Davidson Hotel Check-In App</h5>
+              <p class="card-text">Client: Hospitality Industry...</p>
+              <a href="#" class="read-more btn-link" data-bs-toggle="modal" data-bs-target="#read-more3">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <!--Card 3 Modal  -->
+        <div class="modal fade" tabindex="-1" id="read-more3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5>Davidson Hotel Check-In App: <i style="font-weight: 100; font-size: 1.1rem;">Hospitality Industry</i></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="ms-4">
+                  <h4>Features:</h4>
+
+                  <ul>
+                    <li> <strong>Dashboard:</strong> Displays revenue data, room availability, booking frequency, revenue by room, and peak booking times for better occupancy management.</li>
+
+                    <li><strong>Attendance Monitoring:</strong> Staff log arrival times, enabling accurate attendance tracking and streamlined operations.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <!-- End Of Card 3 -->
+    
+        <!-- Card 4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm border-0 rounded-3">
+            <img src="images/solution1.png" class="card-img-top rounded-top" alt="Card 4">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <h5 class="card-title">MouldBreak Institute of Change Attendance App</h5>
+              <p class="card-text">Client: Education Institution...</p>
+              <a href="#" class="read-more btn-link" data-bs-toggle="modal" data-bs-target="#read-more4">Read More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+               
+      <!--Card 4 Modal  -->
+      <div class="modal fade " tabindex="-1" id="read-more4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5>MouldBreak Institute of Change Attendance App  <i style="font-weight: 100; font-size: 1.1rem;">Education Institution</i></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="ms-4">
+                <h4>Features:</h4>
+
+                <ul>
+                  <li> <strong>Dashboard:</strong> Offers insights into student attendance by class, arrival times, and identifies the most popular classes.</li>
+
+                  <li><strong>Attendance System:</strong> Facilitates quick attendance recording and allows new student registration.</li>
+
+                  <li><strong>Birthdays:</strong> Provides a filtered view of students celebrating birthdays, with automated reminders to encourage student recognition.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+      <!-- End Of Card 4 -->
+
+
+
+<!-- 
+
+  <div class="container">
+    <div class="row  mt-5">
+      <div class="col lg-6">
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col lg-4">
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col lg-4">
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col lg-4">
+        <div class="card">
+          <img src="..." class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div> -->
+
+
+<!-- FAQ SECTION -->
+<!-- Full-Screen Container -->
+<div class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
+  <!-- FAQ Content Section -->
+  <div class="row"> <!-- g-4 adds space between columns -->
+    <!-- Left Column (Text) -->
+    <div class="col-md-6 mb-4 service w-100">
+      <h2 class="mb-4 text-start gaan-header">Our Services - FAQ</h2>
+      
+    </div>
+
+    <!-- Accordion for FAQ Questions -->
+    <div class="col-md-6 mb-4">
+      <p class="text-start bg-white">Our services are curated for you, to give you the very best of our services.</p>
+      <div class="accordion" id="faqAccordion">
+        <!-- FAQ Item 1 -->
+        <div class="accordion-item mt-4">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              What services do you offer? <span class="ms-2"></span>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+            <div class="accordion-body bg-white">
+              We provide a wide range of services, including custom web development, mobile app development, branding, and digital marketing solutions.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              How long does it take to complete a project? <span class="ms-2"></span>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+            <div class="accordion-body bg-white">
+              The timeline for a project depends on its complexity. On average, it may take between 4 to 12 weeks to complete a project.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Do you offer custom solutions? <span class="ms-2"></span>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+            <div class="accordion-body bg-white">
+              Yes, we offer custom solutions tailored to your specific needs. We work closely with our clients to develop unique solutions.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              What is your pricing structure? <span class="ms-2"></span>
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+            <div class="accordion-body bg-white">
+              Our pricing varies depending on the scope of the project. We provide detailed quotes after understanding your requirements.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div >
+        <a href="#" class="btn button-faq rounded-pill mt-4 fs-6">Learn More</a>
+      </div>
+    </div>
+
+    <!-- Right Column (Image) -->
+    <div class="col-md-6 mb-4 d-flex justify-content-center  d-md-block">
+      <img src="images/FAQ.png" class="img-fluid rounded" alt="Services Image">
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- CHOOSE -->
+    <div class="container-fluid Choose-bg py-5">
+      <div class="container">
+        <!-- Section Title -->
+        <div class="container">
+        <div class="text-center sm-6 mb-4">
+          <h2 class="gaan-header">Why Choose Us?</h2>
+          <p>We provide exceptional solutions tailored to meet your needs. Here's why we stand out from the crowd and how our services can elevate your business or project.</p>
+        </div>
+        </div>
+    
+        <!-- Feature Cards -->
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-3">
+              <div class="card-body">
+                <h5 class="card-title d-flex align-items-center">
+                  <div class="icon">
+                    <i class="fa-solid fa-user"></i> 
+                  </div>
+                  Expertise & Experience
+                </h5>
+                <p class="card-text">
+                  With years of experience in the industry, we bring unmatched expertise to every project, ensuring quality and innovation.
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-3">
+              <div class="card-body">
+                <h5 class="card-title d-flex align-items-center">
+                  <div class="icon">
+                    <i class="fa-solid fa-user"></i> 
+                  </div>
+                  Tailored Solutions
+                </h5>
+                <p class="card-text">
+                  We understand that each business is unique. Our solutions are custom-designed to fit your specific goals and needs.
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-3">
+              <div class="card-body">
+                <h5 class="card-title d-flex align-items-center">
+                  <div class="icon">
+                    <i class="fa-solid fa-user"></i> 
+                  </div>
+                  Customer Focused
+                </h5>
+                <p class="card-text">
+                  Our clients are at the heart of everything we do. We prioritize clear communication and results-driven strategies.
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 4 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-3">
+              <div class="card-body">
+                <h5 class="card-title d-flex align-items-center">
+                  <div class="icon">
+                    <i class="fa-solid fa-user"></i> 
+                  </div>
+                  Innovative Approach
+                </h5>
+                <p class="card-text">
+                  We stay ahead of industry trends and embrace innovation, ensuring your business remains competitive and successful.
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 5 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-3">
+              <div class="card-body">
+                <h5 class="card-title d-flex align-items-center">
+                  <div class="icon">
+                    <i class="fa-solid fa-user"></i> 
+                  </div>
+                  Proven Results
+                </h5>
+                <p class="card-text">
+                  Our clients consistently achieve their objectives through our tailored strategies, making us a trusted partner.
+                </p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 6 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm p-3">
+              <div class="card-body">
+                <h5 class="card-title d-flex align-items-center">
+                  <div class="icon">
+                    <i class="fa-solid fa-user"></i> 
+                  </div>
+                  Support & Guidance
+                </h5>
+                <p class="card-text">
+                  Our commitment to your success extends beyond the initial engagement. We provide continuous support and guidance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+
+    <!-- <div class="container py-5">
+      <div class="row"> -->
+        <!-- Left Column: Text -->
+        <!-- <div class="col-md-6 d-flex">
+          <div>
+            <h2 class="text-center mb-4">Book an Appointment</h2>
+            <p class="text-center mb-5">Schedule your appointment with us by filling out the form below. Choose your desired service, and our team will reach out to confirm your appointment.</p>
+          </div>
+        </div> -->
+    
+        <!-- Right Column: Form -->
+        <!-- <div class="col-md-6">
+          <div class="card shadow p-4 border-0">
+            <form>
+              <div class="mb-3">
+                <input type="text" class="form-control border-0 border-bottom" id="name" placeholder="Your Name">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control border-0 border-bottom" id="email" placeholder="Your Email">
+              </div>
+              <div class="mb-3">
+                <input type="tel" class="form-control border-0 border-bottom" id="phone" placeholder="Your Phone Number">
+              </div>
+              <div class="mb-3">
+                <select id="serviceSelect" class="form-select border-0 border-bottom">
+                  <option value="service1">Select a Service</option>
+                  <option value="service2">Service 1</option>
+                  <option value="service2">Service 2</option>
+                  <option value="service3">Service 3</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control border-0 border-bottom" id="comment" rows="3" placeholder="Your Comment"></textarea>
+              </div>
+              <button type="submit" class="btn btn-dark w-100 rounded-pill">Confirm Appointment</button>
+            </form>
+          </div>
+        </div>
+        </div>
+        </div> -->
+        
+    
+
+
+        <!-- About Section -->
+         <div class="row">
+          <section id="about" class="container-fluid about-bg text-white py-5 mt-5 mb-5 mb-md-0">
+            <div class="container">
+              <div class="row align-items-center">
+                <!-- Left Column: Text -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                  <h2 class="mb-4">About Us</h2>
+                  <p>
+                    Gaan Consulting Inc. transforms business operations through custom, no-code app solutions tailored to your specific needs. Our mission is to help businesses, regardless of size, age, or industry, seamlessly collect, store, and analyze data for improved efficiency, scalability, and growth.
+                  </p>
+                  <p>
+                    Our no-code, custom-built apps streamline your operations, empowering your team with real-time insights and optimized workflows. From healthcare to hospitality, education, and more, Gaan Consulting delivers innovative solutions that keep you ahead. Whether you're looking to book an appointment, learn more about our services, or just stay informed, we are here to assist every step of the way. Our commitment to quality and excellence is unmatched.
+                  </p>
+                </div>
+                <!-- Right Column: Image -->
+                <div class="col-lg-6 text-center">
+                  <img src="images/ABOUT PAGE.png" alt="About Us" class="img-fluid rounded shadow">
+                </div>
+              </div>
+            </div>
+          </section>
+         </div>
+       
+        
+
+
+        <!-- GET IN TOUCH -->
+         <div class="row">
+          <div class="bg-ash mt-5">
+            <div class="container d-flex justify-content-center align-items-center vh-100">
+                <div class="row g-5 bg-dark-ash">
+                    <div class="col-md-6 bg-white rounded shadow p-4" id="contact">
+                        <h2 class="mb-4">Get in Touch</h2>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn submit-btn w-100">Submit</button>
+                        </form>
+                    </div>
+                    <!-- Moved Contact Information to a separate col-md-6 -->
+                    <div class="col-md-6 d-flex flex-column ">
+                        <h3 class="mb-2 ml-5">Contact Information</h3>
+                        <p><strong>Phone:</strong> +1 (780) 788 5655</p>
+                        <p><strong>Email:</strong> info@gaanca.com</p>
+                        <p><strong>Address:</strong> 123 Business St, City, Country</p>
+                        <p><strong>WhatsApp:</strong> +1 (123) 456-7890</p>
+                        <p>We look forward to hearing from you! Reach out with any questions or to schedule an appointment.</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+         </div>
+        
+        
+     <!-- FOOTER SECTION -->
+      <div class="row mt-2">
+        <section class="footer-section mt-md-0 py-3">
+          <div class="container">
+            <!-- Row containing three columns -->
+            <div class="row align-items-center justify-content-center">
+        
+              <!-- Column 1: My Website and Subtitle (Centered) -->
+              <!-- <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex justify-content-center">
+                <div class="d-flex flex-column align-items-start">
+                  <h2 class="display-4 fs-4 text-white text-start">My Website</h2>
+                  <p class="lead fs-6 text-start">Helping you find the best solutions. Reach out anytime!</p>
+                </div>
+              </div> -->
+              <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex justify-content-center">
+                <div class="d-flex flex-column ">
+                  <!-- Heading: Center aligned on small screens, left aligned on medium and up -->
+                  <img src="images/GAAN LOGOS/LOGO 3.png" alt="My Website Logo" class="footer-logo my-2 " />
+                  
+                  <!-- Paragraph: Center aligned on small screens, left aligned on medium and up -->
+                  <p class="lead fs-6 text-center text-md-start">Helping you find the best solutions. Reach out anytime!</p>
+                </div>
+              </div>
+        
+              <!-- Column 2: Links (Centered in a flex format on small screens) -->
+              <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex justify-content-center mt-2">
+                <div class="d-flex flex-row flex-wrap justify-content-between align-items-center">
+                  <a href="#about" class="fnav-link mb-2 mb-md-0">About</a>
+                  <a href="#services" class="fnav-link mb-2 mb-md-0">Services</a>
+                  <a href="#contact" class="fnav-link mb-2 mb-md-0">Contact</a>
+                  <a href="#" class="fnav-link mb-2 mb-md-0">Privacy Policy</a>
+                </div>
+              </div>
+              
+              
+        
+              <!-- Column 3: Follow Us (Centered) -->
+              <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex justify-content-center">
+                <div class="d-flex flex-column align-items-center">
+                  <p class="font-weight-bold mb-2 text-center">Follow Us</p>
+                  <div class="social-icons d-flex gap-3 justify-content-center">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="row mt-4">
+                <div class="col-12 text-center">
+                  <p class="copy">&copy; 2024 My Website. All Rights Reserved.</p>
+                </div>
+              </div>
+            </div>
+
+            </div>
+          </div>
+        </section>
+        
+        
+      </div>
+    
+    
+  
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script> -->
+  </body>
+</html>
