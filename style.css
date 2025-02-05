@@ -372,6 +372,13 @@ color: black; /* Set text color to black for readability */
   color: #fff;
 }
 
+
+/* OUR SERVICES */
+
+/* .service{
+  
+} */
+
 @media (max-width: 1282px) {
   .mybtn {
     top: 40rem;
@@ -405,6 +412,12 @@ color: black; /* Set text color to black for readability */
    /* .footer-section{
     margin-top: 5rem;
    } */
+
+   /* OUR SERVICES */
+
+.service{
+  margin-top: 2rem;
+}
 }
 
 /* For small screens (e.g., mobile) */
