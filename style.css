@@ -395,6 +395,12 @@ color: black; /* Set text color to black for readability */
     font-size: 6vw;
   } */
 
+  .button-faq{
+    width: 40%;
+    background-color:#23DCE1 ;
+    color: #1A1A1A;
+  }
+
   .slide_btn {
     font-size: 16px !important;
     width: 100%;
